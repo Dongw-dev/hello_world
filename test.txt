@@ -8,4 +8,4 @@ git push code to remote
 	$ git pull [remoteName] [localBranchName]
 
 3.push
-	$git push origin master-->$git push [remoteName] [localBranchName]
+	$git push -u origin master-->$git push [remoteName] [localBranchName]
