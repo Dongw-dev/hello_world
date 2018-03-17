@@ -1,1 +1,11 @@
 test
+git push code to remote
+1.if you want to add some new files,you can input 
+	[$git add *] or [$git add (file name)]
+2.commit your code
+	$git commit -m "file info you commit"
+---if you are in a group, you should pull code from remote before push your code
+	$ git pull [remoteName] [localBranchName]
+
+3.push
+	$git push origin master-->$git push [remoteName] [localBranchName]
