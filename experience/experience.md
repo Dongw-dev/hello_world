@@ -4,6 +4,10 @@
 
 每个对象都会在内部初始化一个属性(prototype),当我们访问对象属性时,如果这个对象内部不存在这个属性,就会去prototype里面找这个属性,这个prototype又有自己的prototype,直至检索到Object内建对象
 
+```javascript
+instance.constructor.prototype = instance._proto_
+```
+
 ## 作用域链
 
 ## 闭包
@@ -86,3 +90,9 @@ function bindEvent(){
 ```
 
 ## 正则表达式
+
+## 浏览器兼容
+
+## 浏览器内核的理解
+
+## cookies，sessionStorage 和 localStorage 的区别
