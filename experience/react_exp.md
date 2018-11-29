@@ -80,7 +80,7 @@ ReactDOM.render(
 ```
 
 ## 4.组件
-
+### 1.组件介绍
 React 实用React.createClass方法将代码封装成组件（component），然后在网页中插入这个组件。
 
 ```javascript
@@ -100,9 +100,15 @@ PS：
 2. 组件类只能包含一个顶层标签
 3. 所有组件类都必须有自己的 render 方法，用于输出组件
 4. 添加组件属性, class 属性需要写成 className ，for 属性需要写成 htmlFor ，这是因为 class 和 for 是 JavaScript 的保留字
-5. this.props.children
-- this.props.children的值有三种情况:如果当前组件没有子节点，它就是 undefined ;如果有一个子节点，数据类型是 object ；如果有多个子节点，数据类型就是 array
-- 处理方法：React提供方法 React.Children 来处理 this.props.children 。我们可以用 React.Children.map 来遍历子节点
+
+### 2.组件属性
+
+1.组件的用法与原生的 HTML 标签完全一致，可以任意加入属性, 属性就可以通过 `this.props.xxx` 读取
+
+PS:
+- this.props.children
+1. this.props.children的值有三种情况:如果当前组件没有子节点,它就是 undefined ;如果有一个子节点,数据类型是 object ;如果有多个子节点,数据类型就是 array
+2. 处理方法：React提供方法 React.Children 来处理 this.props.children 。我们可以用 React.Children.map 来遍历子节点
 
 ```javascript
 var NotesList = React.createClass({
@@ -127,8 +133,7 @@ ReactDOM.render(
 );
 ```
 
-6. PropTypes:
-- 用来验证组件实例的属性是否符合要求
+2.PropTypes: 用来验证组件实例的属性是否符合要求
 
 ```javascript
 var MyTitle = React.createClass({
@@ -140,3 +145,22 @@ var MyTitle = React.createClass({
    }
 });
 ```
+3.getDefaultProps:用来设置组件属性的默认值
+
+```javascript
+var MyTitle = React.createClass({
+  getDefaultProps : function () {
+    return {
+      title : 'Hello World'
+    };
+  },
+  render: function() {
+     return <h1> {this.props.title} </h1>;
+   }
+});
+ReactDOM.render(
+  <MyTitle />,
+  document.body
+);
+```
+4.获取真实的DOM节点
