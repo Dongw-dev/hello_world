@@ -8,4 +8,5 @@
   node --use_strict calc.js
 ``
 
-## 2.搭建Node.js开发环境
+## 1.搭建Node.js开发环境
+
