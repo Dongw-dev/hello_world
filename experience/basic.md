@@ -93,6 +93,30 @@ function bindEvent(){
 
 ## 浏览器兼容
 
+## 浏览器工作原理
+
+1.地址加载到完成发生什么事情：
+
+```
+-> 发起请求：URL解析/DNS解析
+-> 网络连接：3次握手
+-> 服务器响应请求:返回数据 
+-> 客户端接收响应：浏览器加载/渲染页面
+-> 呈现页面
+```
+
+
 ## 浏览器内核的理解
 
 ## cookies，sessionStorage 和 localStorage 的区别
+
+## 手机分辨率dpr计算
+
+## 首屏优化加载
+
+- 减少首屏CGI的计算量
+- 页面瘦身：压缩HTML,CSS,Javasript
+- 减少请求：CSS，Javascript文件数尽量少
+- 多用缓存
+- 少用table布局
+- 做预加载：用loading动画做过渡
