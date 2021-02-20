@@ -29,23 +29,5 @@
   一种拥有“后进先出”的数据结构的栈，用来存储所有代码执行时产生的执行上下文。
   
   当JavaScript引擎第一次执行脚本，先会创建一个全局执行上下文压入当前执行栈。每当遇到一个函数调用，它会创建一个函数执行上下文并压入栈的顶部。
-   ```flow
-   st=>start: Start
-   i=>inputoutput: 输入年份n
-   cond1=>condition: n能否被4整除？
-   cond2=>condition: n能否被100整除？
-   cond3=>condition: n能否被400整除？
-   o1=>inputoutput: 输出非闰年
-   o2=>inputoutput: 输出非闰年
-   o3=>inputoutput: 输出闰年
-   o4=>inputoutput: 输出闰年
-   e=>end
-   st->i->cond1
-   cond1(no)->o1->e
-   cond1(yes)->cond2
-   cond2(no)->o3->e
-   cond2(yes)->cond3
-   cond3(yes)->o2->e
-   cond3(no)->o4->e
-   ```
+  
   
