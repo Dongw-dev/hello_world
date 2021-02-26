@@ -2,6 +2,9 @@
 
 1.Javascript
    - 执行上下文/作用域链/闭包
+     执行上下文 
+     作用域链 
+     闭包的场景
    - this/call/apply/bind
    - 原型/继承
    - Promise
