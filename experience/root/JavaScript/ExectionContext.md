@@ -34,6 +34,6 @@
       VariableEnvironment = { ... } // 变量环境
     }
   ```
-    
+  创建[词法环境][1]组件
   [1]: https:://github.com/younghz/Markdown "Markdown"
 
