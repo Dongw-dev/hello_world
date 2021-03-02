@@ -17,7 +17,7 @@
   
   当JavaScript引擎第一次执行脚本，先会创建一个全局执行上下文压入当前执行栈。每当遇到一个函数调用，它会创建一个函数执行上下文并压入栈的顶部。
   
-  ```javascript
+  ```
     ExectionContextStack = [];
     ExectionContextStack.push(GlobalExecutionContext); // 首次执行JavaScript脚本, 创建全局执行上下文并压入当前执行栈
     ExectionContextStack.push(<Func>ExecutionContext); // 每次遇到函数调用，都会创建一个函数执行上下文并压入当前栈
