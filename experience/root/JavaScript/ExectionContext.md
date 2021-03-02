@@ -35,7 +35,7 @@
     }
   ```
   
-  [younghz的Markdown库1][^1]
+  [younghz的Markdown库1][1]
   
   [^1]: test
 
