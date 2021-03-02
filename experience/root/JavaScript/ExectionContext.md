@@ -25,7 +25,7 @@
 
   | 创建阶段发生的事情 |
   | ------- |
-  | 1.**this**值的绑定<br>2.创建[词法环境][1]组件<br>3.创建**变量环境**组件 |
+  | 1.**this**值的绑定<br>2.创建**词法环境**组件<br>3.创建**变量环境**组件 |
   
   ```javascript
     ExectionContext = {
@@ -34,6 +34,7 @@
       VariableEnvironment = { ... } // 变量环境
     }
   ```
-  创建[词法环境][1]组件
+  
+  [younghz的Markdown库1][1]    
   [1]: https:://github.com/younghz/Markdown "Markdown"
 
