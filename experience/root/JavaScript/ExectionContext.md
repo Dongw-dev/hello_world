@@ -34,6 +34,16 @@
   | ------- |
   | 1.**this**值的绑定<br>2.创建**词法环境**组件<br>3.创建**变量环境**组件 |
   
+    
+  代码表示：
+  ```javascript
+    ExectionContext = {
+      thisBinding = this,  // this绑定
+      LexicalEnvironment = { ... }, // 词法环境
+      VariableEnvironment = { ... } // 变量环境
+    }
+  ```
+  
   \[**This 绑定**\]    
   
   在全局执行上下文中，``this``值指向全局对象。
@@ -52,13 +62,4 @@
   
   \[**变量环境**\]    
  
-  
-  代码表示：
-  ```javascript
-    ExectionContext = {
-      thisBinding = this,  // this绑定
-      LexicalEnvironment = { ... }, // 词法环境
-      VariableEnvironment = { ... } // 变量环境
-    }
-  ```
 
