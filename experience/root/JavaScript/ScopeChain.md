@@ -11,6 +11,7 @@
     函数的作用域在函数定义的时候就决定了
   - 动态作用域    
     函数的作用域是在函数调用的时候才决定    
+    
     [JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/3)的举例
       
     ```javascript
