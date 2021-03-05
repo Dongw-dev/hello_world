@@ -12,7 +12,7 @@
   - 动态作用域    
     函数的作用域是在函数调用的时候才决定    
     
-    区别：(\[JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/3)\])
+    区别：\[[JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/3)\]
       
     ```javascript
         var value = 1;
