@@ -11,5 +11,28 @@
   JavaScript 采用词法作用域(lexical scoping)，也就是静态作用域。
   
   - 作用域类型
-    - 静态作用域
-    - 动态作用域
+    - 静态作用域    
+      函数的作用域在函数定义的时候就决定了
+      
+    - 动态作用域    
+      函数的作用域是在函数调用的时候才决定
+      
+      > 来自[JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/3)的例子
+      
+      ```javascript
+          var value = 1;
+          
+          function foo() {
+              console.log(value);
+          }
+
+          function bar() {
+              var value = 2;
+              foo();
+          }
+
+          bar();
+          
+          // 结果是?
+      ```
+      
