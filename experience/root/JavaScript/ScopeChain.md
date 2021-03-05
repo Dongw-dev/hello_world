@@ -10,3 +10,6 @@
 
   JavaScript 采用词法作用域(lexical scoping)，也就是静态作用域。
   
+  - 作用域类型
+    - 静态作用域
+    - 动态作用域
