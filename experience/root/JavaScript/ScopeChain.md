@@ -16,7 +16,9 @@
       
     - 动态作用域    
       函数的作用域是在函数调用的时候才决定
-                 
+      
+      [JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/3)的举例
+      
       ```javascript
           var value = 1;
           
@@ -33,4 +35,3 @@
           
           // 结果是?
       ```
-      来自[JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/3)的例子
