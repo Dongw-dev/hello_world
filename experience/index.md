@@ -1,6 +1,6 @@
 # 前端知识汇总
 
-> 资料来源于[axuebin](https://juejin.cn/post/6844904/116339261447)
+> 资料来源于[axuebin](https://juejin.cn/post/6844904116339261447)
 
 1.Javascript
    - 执行上下文/作用域链/闭包
