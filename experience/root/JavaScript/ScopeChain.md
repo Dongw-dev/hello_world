@@ -1,6 +1,6 @@
 # 作用域
 
-  > 资料来自[JavaScript深入之词法作用域和动态作用域]https://github.com/mqyqingfeng/Blog/issues/3)
+  > 资料来自[JavaScript深入之词法作用域和动态作用域](https://github.com/mqyqingfeng/Blog/issues/3)
 
   作用域是指程序源代码中定义变量的区域。
 
