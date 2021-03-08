@@ -1,5 +1,7 @@
 # 作用域
 
+  > 资料来自[JavaScript深入之词法作用域和动态作用域]https://github.com/mqyqingfeng/Blog/issues/3)
+
   作用域是指程序源代码中定义变量的区域。
 
   作用域规定了如何查找变量，也就是确定当前执行代码对变量的访问权限。
@@ -12,7 +14,6 @@
   - 动态作用域    
     函数的作用域是在函数调用的时候才决定    
     
-    区别：\[[JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/3)\]
       
     ```javascript
         var value = 1;
