@@ -11,25 +11,35 @@
   **作用域类型**    
   - 静态作用域   
     函数的作用域在函数定义的时候就决定了
+   ```javascript
+      var value = 1;
+
+      function foo() {
+          console.log(value);
+      }
+
+      function bar() {
+          var value = 2;
+          foo();
+      }
+
+      bar();
+
+      // 结果是?
+   ```
   - 动态作用域    
     函数的作用域是在函数调用的时候才决定    
     
-      
     ```javascript
-        var value = 1;
-
-        function foo() {
-            console.log(value);
+        value=1
+        function foo () {
+            echo $value;
         }
-
-        function bar() {
-            var value = 2;
-            foo();
+        function bar () {
+            local value=2;
+            foo;
         }
-
-        bar();
-
-        // 结果是?
+        bar
     ```
 # 作用域链
 
