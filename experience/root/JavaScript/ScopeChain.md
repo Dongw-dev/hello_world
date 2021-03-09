@@ -54,6 +54,83 @@
   **函数调用**
   
   当函数被调用时，进入函数执行上下文，创建 VO/AO 后，就会将活动对象添加到作用链的前端。
-
-
-
+  
+  执行上下文的作用域链Scope
+  
+  ```javascript
+    Scope = [AO].concat([[Scope]]);
+  ```
+  执行过程：
+  
+  1.函数创建，保存作用域链在内部属性[[scope]]中。
+  
+  ```javascript
+    f.[[scope]] = [
+      globalContext.VO
+    ]
+  ```
+  2.函数执行，创建函数执行上下文，并压到执行上下文栈中
+  
+  ```javascript
+    ECStack = [
+        fContext,
+        globalContext
+    ];
+  ```
+  3.函数执行前准备工作
+  
+  - 复制函数[[scope]]属性创建作用域链
+  
+  ```javascript
+    fContext = {
+      Scope = f.[[scope]]
+    }
+  ```
+  - 用arguments创建活动对象，随后初始化活动对象(AO)，加入形参、函数声明、变量声明
+  
+  ```javascript
+    fContext = {
+      AO: {
+        arguments: {
+          length: 0
+        },
+        variable: undefined
+      },
+      Scope: f.[[scope]] // 作用域链
+    }
+  ```
+  
+  - 将活动对象压入函数作用域链顶端
+  
+  ```javascript
+    fContext = {
+      AO: {
+        arguments: {
+          length: 0
+        },
+        variable: undefined
+      },
+      Scope: [AO, [[scope]]]
+    }
+  ```
+  
+  4.执行函数，修改AO的值
+ 
+  ```javascript
+    fContext = {
+      AO: {
+        arguments: {
+          length: 0
+        },
+        variable: <value>
+      },
+      Scope: [AO, [[scope]]]
+    }
+  ```
+  5.函数执行结束，函数执行上下文从执行栈中弹出
+  
+  ```javascript
+    ECStack = [
+      globalContext
+    ]  
+  ```
