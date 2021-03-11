@@ -28,7 +28,18 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
 > Note: 你可以使用[globalThis](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)获取全局对象，无论你的代码是否在当前上下文运行。
 
 ```javascript
+  // globalThis提供了一个标准的方式来获取不同环境下的全局this对象
   console.log(globalThis === this) // true
+  
+  // globalThis 提供了一个标准的方式来获取不同环境下的全局 this  对象
+  
+  var getGlobal = function () {
+    if (typeof self !== 'undefined') { return self; }
+    if (typeof window !== 'undefined') { return window; }
+    if (typeof global !== 'undefined') { return global; }
+    throw new Error('unable to locate global object');
+  };
+  
 ```
 
 **函数上下文**
