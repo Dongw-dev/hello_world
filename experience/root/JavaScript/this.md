@@ -25,5 +25,11 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
   console.log(b)         // "MDN"
 ```
 
+> Note: 你可以使用[globalThis](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)获取全局对象，无论你的代码是否在当前上下文运行。
+
+```javascript
+  console.log(globalThis === this) // true
+```
+
 **函数上下文**
 
