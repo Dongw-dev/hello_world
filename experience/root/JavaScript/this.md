@@ -44,3 +44,33 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
 
 在函数内部，``this``值取决于函数被调用的方式
 
+- 直接调用
+  ``this``直接指向全局变量
+  
+  **非严格模式**    
+  ```javascript
+    function f1(){
+      return this;
+    }
+    //在浏览器中：
+    f1() === window;   //在浏览器中，全局对象是window
+
+    //在Node中：
+    f1() === globalThis;
+  ```
+  
+  **严格模式**    
+  在严格模式下，如果进入执行环境时没有设置``this``的值，``this``会保持为``undefined``
+  ```javascript
+    function f2(){
+      "use strict"; // 这里是严格模式
+      return this;
+    }
+
+    f2() === undefined; // true
+  ```
+  
+- call()、apply()
+
+  ``this``指向绑定的对象上。
+  
