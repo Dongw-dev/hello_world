@@ -112,3 +112,21 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
   ```
 - 箭头函数
 
+- 作为对象的方法
+
+  当函数作为对象里的方法被调用，``this``被设置为指向该函数的对象。
+  
+  ```javascript
+    var obj = {
+      name: 'test',
+      say: function() {
+       console.log(this.name)
+      }
+    };
+    obj.say() // 'test'
+  ```
+  同样适用此种规则的两种情况：
+  - 原型链中的``this``
+  - getter 与 setter 中的 this
+  
+  
