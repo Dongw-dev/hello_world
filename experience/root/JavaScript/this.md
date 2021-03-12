@@ -107,7 +107,7 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
       console.log(this.name+'-'+age)
     };
     
-    var f = say.bind(); // return f
+    var f = say.bind(); // return new function()
     console.log(f()); // 'test-23'
   ```
 - 箭头函数
