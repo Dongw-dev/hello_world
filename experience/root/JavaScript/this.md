@@ -129,7 +129,7 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
   
   同样适用此种规则的两种情况：
   - 原型链中的``this``
-  - getter 与 setter 中的 this
+  - getter 与 setter 中的``this``
 
 - 构造函数
 - DOM事件处理函数
