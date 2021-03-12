@@ -74,7 +74,41 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
 
   ``this``指向绑定的对象上。
   
+  ```javascript
+    var obj = {
+      name: 'test'
+    };
+    function say(age){
+      console.log(this.name+'-'+age)
+    }
+    /** 
+      第一个参数用作this对象
+      其余参数用作函数参数
+     */
+    say.call(obj, '23')  // 'test-23'
+    /** 
+      第一个参数用作this对象
+      第二个参数是一个数组，数组中的值用作函数参数
+     */
+    say.apply(obj, ['23']) // 'test-23'
+  ```
+  
 - bind()
+
+  **ECMAScript 5** 引入了``Function.prototype.bind()``。
   
-  ``this``永久绑定在``bind``的第一个参数
+  调用``f.bind(someObject)``会创建一个与``f``具有相同函数体和作用域的**函数**， ``this``永久绑定在``bind``的第一个参数。
   
+  ```javascript
+    var obj = {
+      name: 'test'
+    };
+    function say(age){
+      console.log(this.name+'-'+age)
+    };
+    
+    var f = say.bind(); // return f
+    console.log(f()); // 'test-23'
+  ```
+- 箭头函数
+
