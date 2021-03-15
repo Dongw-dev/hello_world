@@ -115,9 +115,9 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
   在箭头函数中，``this``与封闭词法环境的this保持一致。被设置为全局对象
   
   ```javascript
-    var globalThis = this;
+    var globalObject = this;
     var _this = () => this;
-    console.log(globalThis === _this); // true
+    console.log(globalObject === _this); // true
   ```
   
   
