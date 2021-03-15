@@ -131,10 +131,36 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
   - 原型链中的``this``
   
     ```javascript
-      
+      var obj =  {
+        f: function(){
+          console.log(this.name);
+        }
+      };
+      var testObj = Object.create(obj);
+      testObj.name = 'test';
+      console.log(testObj.f()); // 'test'
     ```
   - getter 与 setter 中的``this``
-
+    
+    ```javascript
+      var test = function(){
+        console.log(this.name)
+      };
+      var obj = {
+        name: 'test',
+        // get语法将对象属性绑定到查询该属性时将被调用的函数。
+        get call: function() {
+          console.log(this.name);
+        }
+      }
+      // Object.defineProperty()方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。
+      // 默认情况下，使用 Object.defineProperty() 添加的属性值是不可修改（immutable）的。
+      Object.defineProperty(obj, 'shout', function(){
+        get: test, enumerable: true, configurable: true
+      });
+      console.log(obj.shout()) // 'test'
+    ```
+    
 - 构造函数
 - DOM事件处理函数
 - 内联事件处理函数
