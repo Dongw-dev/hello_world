@@ -189,10 +189,27 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
     
   ```
   
-  
-  
 - DOM事件处理函数
+
+  当函数用作事件处理函数，this指向触发事件的dom。
+  
+  > 一些浏览器在使用非 addEventListener 的函数动态地添加监听函数时不遵守这个约定
+  
+  ```javascript
+    var element = document.getElementById('id');
+    element.addEventListener('click', function(e){
+      console.log(this === e.target); // true
+    });
+  ```
+  
 - 内联事件处理函数
+  
+  被内联``on-event``处理函数 调用时，它的this指向监听器所在的DOM元素。
+  
+  ```javascript
+    
+  ```
+  
 - 类中的this
 
   
