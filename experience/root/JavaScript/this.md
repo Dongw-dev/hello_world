@@ -214,5 +214,44 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
   ```
   
 - 类中的this
-
+  
+  类中的this取决于如何被调用。
+  
+  ```javascript
+    class Police {
+      constructor(){
+        // 在构造器中绑定类方法，可以改变this绑定行为。
+        this.greet = this.greet.bind(this)
+      }
+      yell(){
+        console.log(this.word)
+      }
+      greet(){
+        console.log(this.word)
+      }
+      get word(){
+        return 'Hello?!' 
+      }
+    }
+    
+    class Thief {
+      get word(){
+        return 'SHIT!!' 
+      }
+    }
+    
+    var police = new Police();
+    var thief = new Thief();
+    
+    // 默认情况，this绑定值取决于调用对象
+    police.yell() // Hello?!
+    thief.yell = police.yell
+    thief.yell() // SHIT!!
+    
+    // bind函数改变this指向对象，让this始终指向最初绑定的对象。
+    police.greet() // Hello?!
+    thief.greet = police.greet
+    thief.greet() // Hello?!
+  ```
+  
   
