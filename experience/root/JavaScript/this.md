@@ -158,7 +158,7 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
       Object.defineProperty(obj, 'shout', {
         get: test, enumerable: true, configurable: true
       });
-      console.log(obj.shout()) // 'test'
+      console.log(obj.shout) // 'test'
     ```
     
 - 构造函数
