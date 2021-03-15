@@ -163,6 +163,33 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
     
 - 构造函数
   
+  当一个函数用作构造函数时(使用new关键字)，``this``被被绑定到正在构造的新对象。
+  
+  构造函数创建对象步骤：
+  - 创建新对象
+  - this指向新对象
+  - 给对象赋值
+  - 返回this
+  
+  ```javascript
+    function obj() {
+      this.name = 'test'
+    }
+    var o = new obj();
+    console.log(o.name); // 'test'
+    
+    // 构造函数手动返回对象
+    funtion obj() {
+      this.name = 'test';
+      return {name: 'test001'};
+    }
+    var o = new obj();
+    console.log(o.name); // test001
+    
+  ```
+  
+  
+  
 - DOM事件处理函数
 - 内联事件处理函数
 - 类中的this
