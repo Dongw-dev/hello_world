@@ -206,7 +206,7 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
   
   被内联``on-event``处理函数 调用时，它的this指向监听器所在的DOM元素。
   
-  ```javascript
+  ```html
     <a onclick="alert(this)">Click Me</a>
     
     // 没有设置内部函数的this, 将指向默认全局对象global/window
