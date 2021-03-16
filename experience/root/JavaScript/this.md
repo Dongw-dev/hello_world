@@ -82,13 +82,13 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
       console.log(this.name+'-'+age)
     }
     /** 
-      第一个参数用作this对象
-      其余参数用作函数参数
+     * 第一个参数用作this对象
+     * 其余参数用作函数参数
      */
     say.call(obj, '23')  // 'test-23'
     /** 
-      第一个参数用作this对象
-      第二个参数是一个数组，数组中的值用作函数参数
+     * 第一个参数用作this对象
+     * 第二个参数是一个数组，数组中的值用作函数参数
      */
     say.apply(obj, ['23']) // 'test-23'
   ```
@@ -118,8 +118,24 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
     var globalObject = this;
     var _this = () => this;
     console.log(globalObject === _this); // true
+    
+    var obj = {
+      test: () => {
+        console.log(this);
+      }
+    };
+    console.log(obj.test() === globalObject); // true
+    // 在其他函数内创建的箭头函数
+    var obj1 = {
+      test: function(){
+        var _this = (() => this);
+        return _this;
+      }
+    };
+    
+    
+    
   ```
-  
   
 - 作为对象的方法
 
