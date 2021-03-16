@@ -119,12 +119,14 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
     var _this = () => this;
     console.log(globalObject === _this); // true
     
+    // 作为对象的一个方法调用
     var obj = {
       test: () => {
         console.log(this);
       }
     };
     console.log(obj.test() === globalObject); // true
+    
     // 在其他函数内创建的箭头函数
     var obj1 = {
       test: function(){
