@@ -1,5 +1,8 @@
 # this
 
+> 资料来源[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this)
+> 资料来源[axuebin](https://github.com/axuebin/articles/issues/6)
+
 在传统面向对象语言中，例如：Java，``this``关键字用来示当前对象本身，或者当前对象的一个实例。通过``this``可以获得当前对象属性和调用方法。
 
 在Javascript中，函数的调用方式决定了 this 的值(运行时绑定)。``this``不能在执行期间被赋值，并且在每次函数被调用时``this``的值也可能会不同。
@@ -128,15 +131,23 @@ ES2015 引入了箭头函数，箭头函数不提供自身的``this`` 绑定（`
     console.log(obj.test() === globalObject); // true
     
     // 在其他函数内创建的箭头函数
-    var obj1 = {
+    // 返回值是箭头函数, this绑定在外层函数中
+    var obj = {
       test: function(){
         var _this = (() => this);
         return _this;
       }
     };
     
+    // 作为obj对象的一个方法来调用bar，把它的this绑定到obj。
+    var fn = obj.test();
+    console.log(fn() === globalObject); // false
+    console.log(fn() === obj); // true
     
-    
+    // 引用obj的方法，没有调用test方法
+    // 调用箭头函数后, this指向window，从调用对象获取的当前this指向。
+    var fn = obj.test;
+    console.log(fn()() === globalObject); // true
   ```
   
 - 作为对象的方法
