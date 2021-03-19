@@ -23,15 +23,15 @@
 **模拟实现**
 - 实现原理
 
-```javascript
-  var obj = {};
-  // 将函数设为对象的属性    
-  obj.fn = fn
-  // 执行该函数    
-  obj.fn()
-  // 删除该函数    
-  delete obj.fn
-```
+  ```javascript
+    var obj = {};
+    // 将函数设为对象的属性
+    obj.fn = fn
+    // 执行该函数
+    obj.fn()
+    // 删除该函数
+    delete obj.fn
+  ```
 
 - 具体实现
   
