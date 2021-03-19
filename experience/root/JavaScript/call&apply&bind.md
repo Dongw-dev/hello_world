@@ -6,16 +6,18 @@
 
 ``call()``
 
-语法：
-
+语法
 ```javascript
 
   /**
-   * thisArg: this指向
+   * thisArg: 在函数运行是this的值,如果处于非严格模式，指定为null或undefined时候被会自动替换为指向全局对象
    * arg1/arg2:  指定参数
    */
   function.call(thisArg, arg1, arg2, ...)
  
 ```
 
-
+模拟实现
+```javascript
+  
+```
