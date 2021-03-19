@@ -37,6 +37,8 @@
   
   ```javascript
     Function.prototype.protoCall = function(context){
+      // 当传入null或undefined，指向window
+      var context = context || window;
       // 获取调用call的函数本身
       context.fn = this;
       context.fn();
