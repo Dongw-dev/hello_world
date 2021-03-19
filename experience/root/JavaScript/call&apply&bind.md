@@ -19,18 +19,13 @@
 ```
 
 **模拟实现**
-- 将函数设为对象的属性
-  ```
+- 将函数设为对象的属性    
     obj.fn = fn
-  ```
-- 执行该函数
-  ```
+- 执行该函数    
     obj.fn()
-  ```
-- 删除该函数
-  ```
+- 删除该函数    
     delete obj.fn
-  ```
+    
 ```javascript
   Function.prototype.protoCall = function(){
     
