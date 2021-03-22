@@ -36,6 +36,10 @@
 - 具体实现
   
   ```javascript
+    /**
+     *  模拟call函数
+     *  
+     */
     Function.prototype.protoCall = function(context){
       // 当传入null或undefined，指向window
       var context = context || window;
