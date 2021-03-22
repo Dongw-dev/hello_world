@@ -39,9 +39,24 @@
     Function.prototype.protoCall = function(context){
       // 当传入null或undefined，指向window
       var context = context || window;
+      
       // 获取调用call的函数本身
       context.fn = this;
-      context.fn();
+      
+      // 从arguments对象中取出函数的参数
+      // arguments是一个传递给函数的参数的类数组对象，本身不是个Array对象，但是有length和索引长度属性，可被转换为Array对象。
+      var args = [];
+      for(var i = 1; i < arguments.length;i++ ) {
+        args.push(`arguments[${i}]`);
+      }
+      
+      // context.fn();
+      // eval()会将传入的字符串当做JavaScript代码来执行
+      // eval('context.fn(' + args + ')');
+      // 当调用call函数有返回值时
+      var result = eval('context.fn(' + args + ')');
+      
       delete context.fn
+      return result; 
     }
   ```
