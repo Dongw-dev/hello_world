@@ -64,3 +64,30 @@
       return result; 
     }
   ```
+  
+  ## apply
+  
+  与call类似，区别是：
+  - ``call``的参数是一个列表，将每个参数一个个列出来
+  - ``apply``的参数是一个数组，将每个参数放到一个数组中
+  
+  **语法：**
+  
+  ```javascript
+    /**
+     * 
+     */
+    function.apply(thisArg, [argsArray])
+  ```
+  
+  **具体实现**
+  
+  ```javascript
+    /**
+     *  模拟apply函数
+     *  
+     */
+    Function.prototype.applyproto = function(){
+      
+    }
+  ```
