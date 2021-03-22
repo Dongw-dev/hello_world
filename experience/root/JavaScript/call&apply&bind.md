@@ -40,7 +40,7 @@
      *  模拟call函数
      *  
      */
-    Function.prototype.protoCall = function(context){
+    Function.prototype.callProto = function(context){
       // 当传入null或undefined，指向window
       var context = context || window;
       
@@ -87,7 +87,7 @@
      *  模拟apply函数
      *  
      */
-    Function.prototype.applyproto = function(){
+    Function.prototype.applyProto = function(){
       
     }
   ```
