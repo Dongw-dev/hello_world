@@ -47,7 +47,7 @@
       // 获取调用call的函数本身
       context.fn = this;
       
-      // 从arguments对象中取出函数的参数
+      // 传入的参数并不确定, 需要从arguments对象中取出参数
       // arguments是一个传递给函数的参数的类数组对象，本身不是个Array对象，但是有length和索引长度属性，可被转换为Array对象。
       var args = [];
       for(var i = 1; i < arguments.length;i++ ) {
@@ -75,7 +75,7 @@
   
 ```javascript
   /**
-   * 
+   * argsArray： 参数数组
    */
   function.apply(thisArg, [argsArray])
 ```
@@ -87,7 +87,10 @@
    *  模拟apply函数
    *  
    */
-  Function.prototype.applyProto = function(){
-
+  Function.prototype.applyProto = function(context){
+    
   }
 ```
+
+## bind
+
