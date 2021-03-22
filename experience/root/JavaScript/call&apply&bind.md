@@ -53,7 +53,7 @@
       // context.fn();
       // eval()会将传入的字符串当做JavaScript代码来执行
       // eval('context.fn(' + args + ')');
-      // 当调用call函数有返回值时
+      // 当调用call的函数有返回值时
       var result = eval('context.fn(' + args + ')');
       
       delete context.fn
