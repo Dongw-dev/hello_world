@@ -121,6 +121,23 @@ function.bind(thisArg[, arg1[, arg2[, ...]]])
 
 **模拟实现**
 
+- 使用call和apply实现
+
+```javascript
+  /**
+   * 模拟bind函数
+   * 1.返回函数实现
+   * 2.传递参数实现
+   * 3.使用new操作符创建对象
+   */
+   Function.prototype.bindProto = function (context) {
+     
+   }
+   
+```
+
+- 不使用call和apply实现
+
 ```javascript
   /**
    * 模拟bind函数
