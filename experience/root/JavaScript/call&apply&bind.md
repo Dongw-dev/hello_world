@@ -88,7 +88,12 @@
    *  
    */
   Function.prototype.applyProto = function(context){
-    
+    var context = context || window;
+    context.fn = this;
+    var args = 'arguments[1]';
+    var result = eval('context.fn('+args+')');
+    delete context.fn
+    return result;
   }
 ```
 
