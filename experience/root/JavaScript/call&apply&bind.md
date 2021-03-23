@@ -91,7 +91,16 @@
     var context = context || window;
     context.fn = this;
     var args = 'arguments[1]';
-    var result = eval('context.fn('+args+')');
+    var result;
+    if(result == undefined) {
+      result = context.fn()
+    } else {
+      var fnArr = [];
+      for(var i = 0; i < args.length;i++){
+        fnArr.push('args['+i+']');
+      }
+      result = eval('context.fn('+fnArr+')');
+    }
     delete context.fn
     return result;
   }
