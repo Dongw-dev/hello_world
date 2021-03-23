@@ -80,7 +80,7 @@
   function.apply(thisArg, [argsArray])
 ```
 
-**具体实现**
+**模拟实现**
 
 ```javascript
   /**
