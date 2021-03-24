@@ -54,11 +54,13 @@
         args.push(`arguments[${i}]`);
       }
       
-      // context.fn();
       // eval()会将传入的字符串当做JavaScript代码来执行
       // eval('context.fn(' + args + ')');
       // 当调用call的函数有返回值时
       var result = eval('context.fn(' + args + ')');
+      // eval() 是一个危险的函数，尽量不使用
+      // 存在一个非常好的eval替代方法: 使用 window.Function(https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval)
+      // 
       
       delete context.fn
       return result; 
