@@ -43,4 +43,24 @@
     4.堆内存是无序存储，可以通过引用直接获取
     
 ## 浅拷贝
-  
+
+浅拷贝只复制引用，未复制真正的值。
+
+```javascript
+  // 使用赋值运算符进行浅拷贝
+  var obj = {};
+  console.log(obj); // {}
+  var cloneObj = obj;
+  cloneObj.name = "test";
+  console.log(obj); // { name:"test" }
+  console.log(cloneObj); // { name:"test" }
+```
+
+## 深拷贝
+
+深拷贝不止复制引用，同时也复制对应值。
+
+实现方法：
+- ``JSON``对象的``parse``和``stringify``
+- 利用递归实现每一层重新创建并赋值
+
