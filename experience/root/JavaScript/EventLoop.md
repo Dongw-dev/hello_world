@@ -1,5 +1,10 @@
 # 事件循环Event Loop
 
-``浏览器``或者``Node``一种解决javascript单线程运行时不会阻塞的一种机制，就是``异步``的原理。
+> 资料来源[MDN(并发模型与事件循环)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop)
 
-事件循环负责执行代码，
+``事件循环``负责执行代码，收集和处理时间以及执行队列中的子任务。
+
+|栈 Stack| |堆 Heap|
+|--------| |------| 
+||          ||
+
