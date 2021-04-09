@@ -3,8 +3,7 @@
 > 资料来源[MDN(并发模型与事件循环)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop)    
 > 推荐视频：[https://www.youtube.com/watch?v=8aGhZQkoFbQ](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
-``事件循环``负责执行代码，收集和处理事件以及执行队列中的子任务。 
-
+``事件循环``负责执行代码，收集和处理事件以及执行队列中的子任务，实现异步的机制。
 
 ```html
   Event Loop
@@ -49,7 +48,9 @@
 - 一种``先进先出``的数据结构
 - ``JavaScript运行时(runtime)``包含一个待处理消息队列, 每个消息都关联一个处理该消息的回调函数(callback)函数
 
+**Task**
 
+**MicroTask**
 
 
 
