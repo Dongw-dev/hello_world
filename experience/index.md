@@ -13,7 +13,9 @@
    - 深浅拷贝
    - 事件机制/Event Loop
    - 函数式编程
-   - service worker/web worker
+   - service Worker/Web Worker
+     - Service Worker/PWA
+     - Web Worker
    - 常用方法
 
 2.CSS
