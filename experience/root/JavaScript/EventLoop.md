@@ -1,8 +1,10 @@
 # 事件循环Event Loop
 
-> 资料来源[MDN(并发模型与事件循环)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop)
+> 资料来源[MDN(并发模型与事件循环)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop)    
+> 推荐视频：[https://www.youtube.com/watch?v=8aGhZQkoFbQ](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
-``事件循环``负责执行代码，收集和处理时间以及执行队列中的子任务。  
+``事件循环``负责执行代码，收集和处理事件以及执行队列中的子任务。 
+
 
 ```html
   Event Loop
@@ -26,3 +28,4 @@
       └───────────┘ └──────────┘
     ──────────────────────────────────────────────────────
 ```
+
