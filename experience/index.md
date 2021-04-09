@@ -35,18 +35,19 @@
    - 状态管理
    - 组件通信
    - Virtual DOM
-   - diff
+   - Diff
    - Vue computed/watch原理
    - React Hook
    - React Hoe/Vue mixin
    - Vue和React区别
 
 4.工程化
-   - webpack
-   - babel
+   - Webpack
+   - Babel
    - 模板引擎
    - 前端发布
    - weex
+   - 前端监控
 
 5.性能优化
    - 打包优化
