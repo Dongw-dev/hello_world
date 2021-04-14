@@ -8,7 +8,7 @@
 
   - 定位元素
     
-    指计算后位置属性为relative, absolute, fixed, sticky中的其中一个元素。
+    指计算后位置属性为relative, absolute, fixed, sticky(非static)中的其中一个元素。
     
   - 相对定位元素-relative
     
