@@ -1,5 +1,8 @@
 # 回流Reflow重绘Repaint
 
+> 资料来源[https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=zh-cn](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=zh-cn)
+
+
 浏览器渲染过程
 - 构建对象模型    
   根据HTML和CSS生成``DOM(Document Object Model)``树和``CSSOM(CSS Object Model)``树
