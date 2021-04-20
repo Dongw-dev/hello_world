@@ -3,19 +3,16 @@
 > 资料来源[https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=zh-cn](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css?hl=zh-cn)
 
 
-浏览器渲染过程
+**浏览器渲染过程**
 - 构建对象模型    
-  解析HTML和CSS生成``DOM(Document Object Model)``树和``CSSOM(CSS Object Model)``树
+  解析HTML标记和CSS标记生成``DOM(Document Object Model)``树和``CSSOM(CSS Object Model)``树
 - DOM树和CSSOM树合并生成渲染树
   渲染树只包含渲染网页的节点
 - ``Layout``（回流）计算每个对象的精确位置和大小
 - ``Paint``（重绘）将渲染树中的每个节点转换成屏幕上的实际像素。
 
 ```HTML
-                                ┌───────┐
-                                |  DOM  |
-                                └───────┘
-                                    ↓
+  
   ┌────────┐    ┌──────────┐    ┌────────┐ 
   |  HTML  │ —> │  HTML    | —> │  DOM   |         ┌──────────┐
   └────────┘    |  Parser  |    |  Tree  |         |  Layout  | 
@@ -31,7 +28,6 @@
   └────────┘    └──────────┘    └─────────┘
 
 ```
-
 
 ## 回流Reflow
 
