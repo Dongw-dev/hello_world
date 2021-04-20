@@ -5,8 +5,11 @@
 
 浏览器渲染过程
 - 构建对象模型    
-  根据HTML和CSS生成``DOM(Document Object Model)``树和``CSSOM(CSS Object Model)``树
+  解析HTML和CSS生成``DOM(Document Object Model)``树和``CSSOM(CSS Object Model)``树
 - DOM树和CSSOM树合并生成渲染树
+  渲染树只包含渲染网页的节点
+- ``Layout``（回流）计算每个对象的精确位置和大小
+- ``Paint``（重绘）将渲染树中的每个节点转换成屏幕上的实际像素。
 
 ```HTML
                                 ┌───────┐
@@ -32,7 +35,7 @@
 
 ## 回流Reflow
 
-当浏览器必须重新处理和绘制部分或全部页面时，``回流``就会发生。
+页面布局和几何信息发生变化的时候，回流就会发生。
 
 **导致回流操作**
 - 调整窗口大小
