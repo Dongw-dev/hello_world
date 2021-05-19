@@ -53,4 +53,4 @@
 - 避免使用CSS的JavaScript表达式（仅IE浏览器）
 - 引入外部链接的样式表文件最好放在头部
 
-## 重绘Reflow
+## 重绘Repaint
