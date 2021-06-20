@@ -1,6 +1,7 @@
 # HTTP 
 
 HTTP（HyperText Transfer Protocal）超文本传输协议
+
 **HTTP协议结构**
 
 **HTTP协议特点**
