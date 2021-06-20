@@ -100,7 +100,7 @@
           // 声明式环境记录器
           EnvironmentRecord: {
             Type: "Declarative",
-            Arguments：{ length: Number } 
+            Arguments: { length: Number } 
           },
           outer: <Global or outer function environment reference> // 外部环境引用
         }
