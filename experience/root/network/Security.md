@@ -11,8 +11,8 @@ Cross-Site Scripting(跨站脚本攻击)简称为XSS，一种代码注入攻击�
 **XSS分类**
 - 存储型XSS    
   攻击者将恶意代码提交到数据库中
-- 反射型XSS
-  反射型XSS常见于URL传参
+- 反射型XSS    
+  反射型XSS常见于URL传参    
 - DOM型XSS
   
 
