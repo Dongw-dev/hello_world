@@ -48,9 +48,9 @@ Cross-site Request forgery(跨站请求伪造)。
 
 **防护策略**
 - 阻止不明外域的访问    
-  1.同源检测
+  1.同源检测    
   2.Samesite Cookie
 - 提交时要求附加本域才能提交    
-  1.CSRF Token
+  1.CSRF Token    
   2.双重Cookie认证
   
