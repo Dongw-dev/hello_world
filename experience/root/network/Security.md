@@ -1,4 +1,4 @@
-# 前端安全
+# 网络安全
 
 ## XSS攻击
 Cross-Site Scripting(跨站脚本攻击)简称为XSS，一种代码注入攻击。
