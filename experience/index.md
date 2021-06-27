@@ -37,6 +37,8 @@
    - Virtual DOM
    - Diff
    - Vue computed/watch原理
+   - Vue router原理
+   - Vue keep-alive
    - React Hook
    - React Hoe/Vue mixin
    - Vue和React区别
