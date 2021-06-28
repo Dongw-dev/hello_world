@@ -1,5 +1,5 @@
 # 生命周期
-
+  ![avatar]https://cn.vuejs.org/images/lifecycle.png
 - beforeCreate
   
 - created
