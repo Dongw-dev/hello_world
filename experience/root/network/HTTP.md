@@ -39,6 +39,9 @@ HTTP协议定义Web客户端如何从Web服务端请求页面，以及客户端�
     GET /test HTTP/1.1
     Host: test.com
     Connection: keep-alive
+    content-length: 194
+    content-type: text/plain;charset=UTF-8
+
     
     name=test&age=18
   ```
@@ -54,7 +57,8 @@ HTTP协议定义Web客户端如何从Web服务端请求页面，以及客户端�
   ```
     HTTP/1.1 200 OK
     Date: Tue, 10 Jul 2021
-    Connection: keep-alive
+    content-length: 0
+    content-type: text/html; charset=utf-8
     
     <html>...
   ```
